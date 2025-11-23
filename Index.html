@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Push Me Site</title>  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #faf7f2, #f7c6d8);
+      font-family: Arial, sans-serif;
+    }
+
+    .push-btn {
+      padding: 15px 30px;
+      font-size: 20px;
+      background: #ff7fbf;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 120, 175, 0.4);
+      transition: 0.2s;
+    }
+
+    .push-btn:hover {
+      transform: scale(1.06);
+    }
+
+    video {
+      margin-top: 20px;
+      max-width: 90%;
+      display: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+  </style></head>
+<body><button class="push-btn" onclick="showVideo()">PUSH ME</button>
+
+<video id="myVideo" controls></video>
+
+  <script>
+    const LOCAL_FILENAME = "video.mp4"; // taro file videonya di folder yang sama
+
+    function showVideo() {
+      const vid = document.getElementById("myVideo");
+      vid.src = LOCAL_FILENAME;
+      vid.style.display = "block";
+    }
+  </script></body>
+</html>
